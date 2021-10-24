@@ -1,0 +1,12 @@
+.formulario {
+    max-width: 40%;
+    margin: 30px auto;
+    overflow: auto;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.resultados{
+    margin: 20px 0px 0px 20px;
+}
