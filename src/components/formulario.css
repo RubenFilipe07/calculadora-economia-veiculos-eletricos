@@ -7,6 +7,13 @@
     border-radius: 5px;
 }
 
-.resultados{
-    margin: 20px 0px 0px 20px;
+@media only screen and (max-width: 680px) {
+    .formulario {
+        max-width: 90%;
+        margin: 30px auto;
+    }
+
+    .btn-calcular{
+        width: 100%;
+    }
 }

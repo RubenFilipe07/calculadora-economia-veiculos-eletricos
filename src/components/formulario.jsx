@@ -86,7 +86,7 @@ class Formulario extends Component {
                 </Form.Group>
 
             
-          <Button variant="success" type="submit">Calcular</Button>
+          <Button variant="success" className="btn-calcular" type="submit">Calcular</Button>
 
           <div className="resultados">
             <h5>{precoViagemCombustao}</h5>

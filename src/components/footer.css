@@ -1,0 +1,31 @@
+footer, footer a {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.github {
+    color: #586069;
+}
+
+.react{
+    color: #00d8ff;
+    font-weight: 600;
+}
+
+.github:hover {
+    color: #586069;
+}
+
+.react:hover{
+    color: #00d8ff;
+}
+
+.github:visited {
+    color: #586069;
+}
+
+.react:visited{
+    color: #00d8ff;
+}
+
+
