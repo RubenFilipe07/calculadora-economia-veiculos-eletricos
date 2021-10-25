@@ -10,6 +10,10 @@ Calculadora que exibe a economia de veículos com motores elétricos comparados 
   <img src="https://user-images.githubusercontent.com/53026536/138632946-5220b1fd-04b6-4ba3-b144-8b3630127d9b.png" /> 
 </a>
 
+<h2>Pontuação no lighthouse</h2>
+<img width="550" src="https://user-images.githubusercontent.com/53026536/138633293-990025f5-6de9-4860-83c3-df6345ee4f14.png" alt="Lighthouse">
+<p>O site foi testado utilizando a ferramenta <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> do google, e obteve pontuação máxima nas 4 categorias.</p>
+
 <h3>Ferramentas utilizadas</h3>
 
 <p>
