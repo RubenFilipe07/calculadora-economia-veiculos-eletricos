@@ -38,13 +38,24 @@ class Formulario extends Component {
   
       let valorEconomizado = valorViagemCombustao - valorViagemEletrico
 
-      this.setState({ precoViagemCombustao: "Viagem do veículo a combustão: R$" + valorViagemCombustao.toFixed(2)})
-      this.setState({ precoViagemEletrico: "Viagem do veículo elétrico: R$" + valorViagemEletrico.toFixed(2)})
+      this.setState({ precoViagemCombustao: valorViagemCombustao.toFixed(2)})
+      this.setState({ precoViagemEletrico: valorViagemEletrico.toFixed(2)})
 
-      this.setState({ resultado: "Economia: R$" + valorEconomizado.toFixed(2)})
+      this.setState({ resultado: valorEconomizado.toFixed(2)})
      
       event.preventDefault();
 
+    }
+
+    limpaForm = () =>{
+      this.setState({
+        distanciaPercorrida: '',
+        consumoCombustao: '',
+        precoCombustao: '',
+        consumoEletrico: '',
+        precoEletrico: '',
+        resultado: ''
+      });
     }
   
     render() {
@@ -54,46 +65,64 @@ class Formulario extends Component {
             <Card.Title className="text-center">Calcule a economia de um veículo elétrico</Card.Title>
 
             <Form.Group className="mb-3">
-                    <Form.Label>Distância percorrida (km)</Form.Label>
-                    <Form.Control value={this.state.distanciaPercorrida} name="distanciaPercorrida" onChange={this.handleChange} type="number" onWheel={(e) => e.target.blur()} />
+                    <Form.Label htmlFor="distanciaPercorrida">Distância percorrida (km)</Form.Label>
+                    <Form.Control value={this.state.distanciaPercorrida} id="distanciaPercorrida" name="distanciaPercorrida" onChange={this.handleChange} type="number" onWheel={(e) => e.target.blur()} />
                 </Form.Group>
 
                 <hr></hr>
 
                 <Card.Title>Veículo a combustão</Card.Title>
                 <Form.Group className="mb-3">
-                    <Form.Label>Consumo médio (km/litro)</Form.Label>
-                    <Form.Control value={this.state.consumoCombustao} name="consumoCombustao" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
+                    <Form.Label htmlFor="consumoCombustao">Consumo médio (km/litro)</Form.Label>
+                    <Form.Control value={this.state.consumoCombustao} id="consumoCombustao" name="consumoCombustao" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Preço do combustível (R$/litro)</Form.Label>
-                    <Form.Control value={this.state.precoCombustao} name="precoCombustao" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
+                    <Form.Label htmlFor="precoCombustao">Preço do combustível (R$/litro)</Form.Label>
+                    <Form.Control value={this.state.precoCombustao} id="precoCombustao" name="precoCombustao" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
                 </Form.Group>
 
                 <hr></hr>
 
-
                 <Card.Title>Veículo a elétrico</Card.Title>
                 <Form.Group className="mb-3">
-                    <Form.Label>Consumo médio (km/kWh)</Form.Label>
-                    <Form.Control value={this.state.consumoEletrico} name="consumoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} data-toggle="tooltip" data-placement="left" title="Dividir a autonomia do veículo pela capacidade total da bateria. Ex.: 400Km/55kWh = 8Km/kWh" />
+                    <Form.Label htmlFor="consumoEletrico">Consumo médio (km/kWh) <img alt="info" width="18" src="info-square-fill.svg" data-toggle="tooltip" data-placement="left" title="Dividir a autonomia do veículo pela capacidade total da bateria. Ex.: 400Km/55kWh = 8Km/kWh"></img></Form.Label>
+                    <Form.Control value={this.state.consumoEletrico} id="consumoEletrico" name="consumoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Preço da energia (R$/kWh)</Form.Label>
-                    <Form.Control value={this.state.precoEletrico} name="precoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
+                    <Form.Label htmlFor="precoEletrico">Preço da energia (R$/kW)</Form.Label>
+                    <Form.Control value={this.state.precoEletrico} id="precoEletrico" name="precoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
                 </Form.Group>
 
-            
-          <Button variant="success" className="btn-calcular" type="submit">Calcular</Button>
+          <Button variant="primary" className="btn-calcular" type="submit">Calcular</Button>
+          <Button variant="danger" className="btn-limpar" type="submit" onClick={this.limpaForm}>Limpar</Button>
+         
+          {isNaN(resultado) || resultado === "" ? "" :
+          <div>
+            <hr/>
+            <Card>
+              <Card.Header>
+                <b>Resultado</b>
+              </Card.Header>
 
-          <div className="resultados">
-            <h5>{precoViagemCombustao}</h5>
-            <h5>{precoViagemEletrico}</h5>
-            <h3>{resultado}</h3>
-          </div> 
-      
+              <Card.Body>
+                <p>
+                  <span>{isNaN(precoViagemCombustao) ||  precoViagemCombustao === "" ? "" : "Viagem do veículo a combustão: R$"+ precoViagemCombustao}</span>
+                </p>
+
+                <p>
+                  <span>{isNaN(precoViagemEletrico) || precoViagemEletrico === "" ? "" : "Viagem do veículo elétrico: R$" + precoViagemEletrico}</span>
+                </p>
+
+                <p>
+                  <span>{isNaN(resultado) || resultado === "" ? "" : "Economia: R$" + resultado}</span>
+                </p>
+              </Card.Body>
+            </Card>
+          </div>
+         }
+
         </Form>
       );
     }

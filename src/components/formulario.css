@@ -7,13 +7,22 @@
     border-radius: 5px;
 }
 
+.btn-limpar{
+    margin-left: 4px;    
+}
+
 @media only screen and (max-width: 680px) {
     .formulario {
         max-width: 90%;
-        margin: 30px auto;
+        margin: 10px auto;
     }
 
     .btn-calcular{
-        width: 100%;
+        width: 49.5%;
+    }
+
+    .btn-limpar{
+        margin-left: 2px;   
+        width: 49.5%;
     }
 }
