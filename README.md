@@ -7,7 +7,7 @@ Calculadora que exibe a economia de veículos com motores elétricos comparados 
 <p>Visualize em: <a href="https://rubenfilipe07.github.io/calculadora-economia-veiculos-eletricos/">https://rubenfilipe07.github.io/calculadora-economia-veiculos-eletricos/</a></p>
 
 <a href="https://rubenfilipe07.github.io/calculadora-economia-veiculos-eletricos/">
-  <img src="https://user-images.githubusercontent.com/53026536/138585517-3c61fe2c-481c-4dde-a505-02117874eabb.png" /> 
+  <img src="https://user-images.githubusercontent.com/53026536/138632946-5220b1fd-04b6-4ba3-b144-8b3630127d9b.png" /> 
 </a>
 
 <h3>Ferramentas utilizadas</h3>
