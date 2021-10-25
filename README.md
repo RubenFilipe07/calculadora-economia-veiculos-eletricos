@@ -12,7 +12,7 @@ Calculadora que exibe a economia de veículos com motores elétricos comparados 
 
 <h3>Ferramentas utilizadas</h3>
 
-<p align='left'>
+<p>
   <a href="https://reactjs.org/">
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   </a>
