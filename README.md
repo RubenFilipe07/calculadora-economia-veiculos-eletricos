@@ -1,5 +1,13 @@
 # Calculadora-economia-veiculos-eletricos
 
+<h3>Como instalar o projeto</h3>
+
+<ol>
+  <li>Clone o repositório com o comando: <code>git clone https://github.com/RubenFilipe07/calculadora-economia-veiculos-eletricos.git</code> </li>
+  <li>Dentro do projeto digite <code>npm i</code> no terminal para baixar as dependências</li>
+  <li>Digite <code>npm start</code> para iniciar o servidor</li>
+</ol>
+
 <h3>Descrição</h3>
 Calculadora que exibe a economia de veículos com motores elétricos comparados aos veículos a combustão.
 
