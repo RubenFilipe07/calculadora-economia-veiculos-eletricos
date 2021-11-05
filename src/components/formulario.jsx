@@ -3,6 +3,7 @@ import './formulario.css'
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Modal from './ModalInfo'
 
 class Formulario extends Component {
     constructor(props) {
@@ -86,8 +87,9 @@ class Formulario extends Component {
 
                 <Card.Title>Veículo a elétrico</Card.Title>
                 <Form.Group className="mb-3">
-                    <Form.Label htmlFor="consumoEletrico">Consumo médio (km/kWh) <img alt="info" width="18" src="info-square-fill.svg" data-toggle="tooltip" data-placement="left" title="Dividir a autonomia do veículo pela capacidade total da bateria. Ex.: 400Km/55kWh = 8Km/kWh"></img></Form.Label>
+                    <Form.Label htmlFor="consumoEletrico">Consumo médio (km/kWh) <Modal></Modal></Form.Label>
                     <Form.Control value={this.state.consumoEletrico} id="consumoEletrico" name="consumoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
+                   
                 </Form.Group>
 
                 <Form.Group className="mb-3">
