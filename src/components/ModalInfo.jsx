@@ -23,12 +23,7 @@ export default function ModalInfo(props) {
             <Modal.Title>{props.titulo}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-<<<<<<< HEAD
           {props.conteudo}
-=======
-            Divida a autonomia do veículo pela capacidade total da bateria. <br/>
-            Ex.: 400Km/50kWh = 8Km/kWh
->>>>>>> 9af8949548f80781aadfa152f9a9306dfba2b90e
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>OK</Button>
