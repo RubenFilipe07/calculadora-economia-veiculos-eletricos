@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button'
 
 
-export default function ModalInfo() {
+export default function ModalInfo(props) {
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
@@ -20,11 +20,10 @@ export default function ModalInfo() {
           keyboard={false}
         >
           <Modal.Header closeButton>
-            <Modal.Title>Como calcular consumo médio?</Modal.Title>
+            <Modal.Title>{props.titulo}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            Divida a autonomia do veículo pela capacidade total da bateria. <br/>
-            Ex.: 400Km/55kWh = 8Km/kWh
+          {props.conteudo}
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>OK</Button>

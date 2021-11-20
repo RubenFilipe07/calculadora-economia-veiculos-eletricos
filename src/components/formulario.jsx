@@ -87,7 +87,7 @@ class Formulario extends Component {
 
                 <Card.Title>Veículo a elétrico</Card.Title>
                 <Form.Group className="mb-3">
-                    <Form.Label htmlFor="consumoEletrico">Consumo médio (km/kWh) <Modal></Modal></Form.Label>
+                    <Form.Label htmlFor="consumoEletrico">Consumo médio (km/kWh) <Modal titulo="Como calcular consumo médio?" conteudo="Divida a autonomia do veículo pela capacidade total da bateria. Ex.: 400Km/55kWh = 8Km/kWh"></Modal></Form.Label>
                     <Form.Control value={this.state.consumoEletrico} id="consumoEletrico" name="consumoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
                    
                 </Form.Group>
