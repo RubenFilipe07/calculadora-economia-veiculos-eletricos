@@ -24,7 +24,7 @@ export default function ModalInfo() {
           </Modal.Header>
           <Modal.Body>
             Divida a autonomia do veículo pela capacidade total da bateria. <br/>
-            Ex.: 400Km/55kWh = 8Km/kWh
+            Ex.: 400Km/50kWh = 8Km/kWh
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>OK</Button>
