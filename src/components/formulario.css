@@ -7,7 +7,7 @@
     border-radius: 5px;
 }
 
-.btn-limpar{
+.btn-calcular{
     margin-left: 4px;    
 }
 
@@ -19,10 +19,10 @@
 
     .btn-calcular{
         width: 49.5%;
+        margin-left: 2px;   
     }
 
     .btn-limpar{
-        margin-left: 2px;   
         width: 49.5%;
     }
 }

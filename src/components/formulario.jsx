@@ -85,7 +85,7 @@ class Formulario extends Component {
 
                 <hr></hr>
 
-                <Card.Title>Veículo a elétrico</Card.Title>
+                <Card.Title>Veículo elétrico</Card.Title>
                 <Form.Group className="mb-3">
                     <Form.Label htmlFor="consumoEletrico">Consumo médio (km/kWh) <Modal titulo="Como calcular consumo médio?" conteudo="Divida a autonomia do veículo pela capacidade total da bateria. Ex.: 400Km/55kWh = 8Km/kWh"></Modal></Form.Label>
                     <Form.Control value={this.state.consumoEletrico} id="consumoEletrico" name="consumoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
@@ -97,9 +97,9 @@ class Formulario extends Component {
                     <Form.Control value={this.state.precoEletrico} id="precoEletrico" name="precoEletrico" onChange={this.handleChange}  type="number" onWheel={(e) => e.target.blur()} />
                 </Form.Group>
 
-          <Button variant="primary" className="btn-calcular" type="submit">Calcular</Button>
           <Button variant="danger" className="btn-limpar" type="submit" onClick={this.limpaForm}>Limpar</Button>
-         
+          <Button variant="primary" className="btn-calcular" type="submit">Calcular</Button>
+     
           {isNaN(resultado) || resultado === "" ? "" :
           <div>
             <hr/>
